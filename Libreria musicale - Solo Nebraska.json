@@ -1,0 +1,19 @@
+{"Nebraska": {"Casa Discografica":"Columbia Records",
+              "Artisti":{"Bruce Springsteen":"voce, chitarra acustica ed elettrica, armonica a bocca, autore di testi e musiche",
+              	         "Clarence Clemons":"sassofono, percussioni, cori", 
+              	         "Roy Bittan":"sintetizzatore, pianoforte, tastiera, cori",
+                         "Danny Federici":"organo, pianoforte, glockenspiel, tastiera, cori, pianoforte in Born in the U.S.A.",
+                         "Garry Tallent":"basso, cori",
+                         "Steven Van Zandt":"chitarra aucustica, mandolino, cori",
+                         "Max Weinberg":"batteria, percussioni, cori",
+                         "Richie La Bamba Rosenberg":"cori in Cover Me e No Surrender",
+                         "Ruth Davis":"cori in My Hometown"},
+              "canzoni":{"1st":"Born in the U.S.A.","2nd":"Cover me","3rd":"Darlington County","4th":"Working on the Highway",
+                          "5th":"Downtown Train","6th":"I'm on Fire",
+                          "7th":"No Surrender","8th":"Bobby Jean",
+                          "9th":"I'm Going Down", "10th":"Glory Days",
+                          "11th":"Dancing in The Dark","12th":"My Hometown"},
+              "anno di pubblicazione":"1982",
+              "genere":"pop rock" 
+             }
+}
