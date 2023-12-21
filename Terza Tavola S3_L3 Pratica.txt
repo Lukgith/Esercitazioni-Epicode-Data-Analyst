@@ -1,0 +1,213 @@
+-- create a table
+CREATE TABLE STUDENTE (
+    MatricolaStudente INTEGER NOT NULL,
+    NomeStudente TEXT NOT NULL,
+    CittaStudente TEXT NOT NULL
+);
+
+CREATE TABLE CORSO (
+    CodiceCorso INTEGER NOT NULL,
+    NomeCorso TEXT NOT NULL,
+    MatricolaDocente INTEGER NOT NULL
+);
+
+CREATE TABLE DOCENTE (
+    MATRICOLADocente INTEGER NOT NULL,
+    NomeDocente TEXT NOT NULL
+);
+
+CREATE TABLE ESAME (
+    CodiceEsame INTEGER NOT NULL,
+    MATRICOLAStudente TEXT NOT NULL,
+    Data Date NOT NULL,
+    Voto INTEGER NOT NULL,
+    SettoreScientifico TEXT NOT NULL
+);
+
+
+-- insert some values
+INSERT INTO STUDENTE (MatricolaStudente, NomeStudente, CittaStudente) VALUES
+(123456, 'Luca Rossi', 'Roma'),
+(234567, 'Elena Bianchi', 'Milano'),
+(345678, 'Francesco Russo', 'Napoli'),
+(456789, 'Sara Colombo', 'Torino'),
+(567890, 'Marco Conti', 'Palermo'),
+(678901, 'Giulia Ferrari', 'Genova'),
+(789012, 'Matteo De Angelis', 'Bologna'),
+(890123, 'Martina Moretti', 'Firenze'),
+(901234, 'Andrea Marchetti', 'Bari'),
+(123789, 'Chiara Gentile', 'Catanzaro');
+
+
+INSERT INTO CORSO (CodiceCorso, NomeCorso, MatricolaDocente) VALUES
+(123001, 'Algoritmi e Strutture Dati', 987654),
+(234002, 'Biologia Molecolare', 876543),
+(345003, 'Economia Aziendale', 765432),
+(456004, 'Architettura Moderna', 654321),
+(567005, 'Politica Comparata', 543210),
+(123006, 'Calcolo Numerico', 987655),
+(234007, 'Genetica Avanzata', 876546),
+(345008, 'Econometria Applicata', 765437),
+(456009, 'Design Sostenibile', 654326),
+(567010, 'Teoria Politica Moderna', 543215),
+(123011, 'Intelligenza Artificiale', 987656),
+(234012, 'Immunologia Avanzata', 876547),
+(345013, 'Finanza Quantitativa', 765438),
+(456014, 'Urbanistica Sostenibile', 654327),
+(567015, 'Sociologia Politica', 543216),
+(123016, 'Robotica Avanzata', 987658),
+(234017, 'Bioinformatica', 876542),
+(345018, 'Economia del Istruzione', 765434),
+(456019, 'Architettura del Paesaggio', 654323),
+(567020, 'Politiche Ambientali', 543211);
+
+INSERT INTO DOCENTE (MATRICOLADocente, NomeDocente) VALUES
+(987654, 'Mario Rossi'),
+(876543, 'Anna Bianchi'),
+(765432, 'Luca Verdi'),
+(654321, 'Laura Neri'),
+(543210, 'Giovanni Russo'),
+(987655, 'Martina Esposito'),  
+(876546, 'Andrea Conti'),     
+(765437, 'Elena Moretti'),      
+(654326, 'Giuseppe Colombo'),   
+(543215, 'Francesca Romano'),   
+(987656, 'Roberto Ferrari'),    
+(876547, 'Sara Santoro'),       
+(765438, 'Marco De Luca'),      
+(654327, 'Paola Ricci'),        
+(543216, 'Davide Marini'), 
+(987658, 'Giulia Licori'),
+(876542, 'Gianfranco Cantarini'),
+(765434, 'Guglielmo Ridolfi'),
+(654323, 'Vittorio Belvedere'),
+(543211, 'Giustino Strilloni');
+
+
+
+INSERT INTO ESAME (CodiceEsame, MATRICOLAStudente, Data, Voto, SettoreScientifico) VALUES
+(123001, 123456, '2023-01-15', 20, 'INF'),         -- Algoritmi e Strutture Dati
+(234002, 234567, '2023-02-18', 18, 'BIO'),         -- Biologia Molecolare
+(345003, 345678, '2023-03-22', 25, 'ECO'),         -- Economia Aziendale
+(456004, 456789, '2023-09-28', 30, 'ARC'),         -- Architettura Moderna
+(567005, 567890, '2023-10-10', 29, 'POL'),         -- Politica Comparata
+(123006, 678901, '2023-01-25', 17, 'INF'),         -- Algoritmi e Strutture Dati
+(234007, 789012, '2023-02-22', 22, 'BIO'),         -- Biologia Molecolare
+(345008, 890123, '2023-03-30', 19, 'ECO'),         -- Economia Aziendale
+(456009, 901234, '2023-09-29', 28, 'ARC'),         -- Architettura Moderna
+(567010, 123789, '2023-10-15', 26, 'POL'),         -- Politica Comparata
+(123011, 123456, '2023-01-30', 30, 'INF'),         -- Algoritmi e Strutture Dati
+(234012, 234567, '2023-02-25', 23, 'BIO'),         -- Biologia Molecolare
+(345013, 345678, '2023-03-28', 16, 'ECO'),         -- Economia Aziendale
+(456014, 456789, '2023-09-30', 29, 'ARC'),         -- Architettura Moderna
+(567015, 567890, '2023-11-05', 18, 'POL'),         -- Politica Comparata
+(123016, 678901, '2023-01-18', 25, 'INF'),         -- Algoritmi e Strutture Dati
+(234017, 789012, '2023-02-28', 27, 'BIO'),         -- Biologia Molecolare
+(345018, 890123, '2023-03-15', 15, 'ECO'),         -- Economia Aziendale
+(456019, 901234, '2023-09-18', 30, 'ARC'),         -- Architettura Moderna
+(567020, 123789, '2023-11-10', 22, 'POL'),         -- Politica Comparata
+(123001, 123456, '2023-01-28', 18, 'INF'),         
+(234002, 234567, '2023-02-15', 23, 'BIO'),         
+(345003, 345678, '2023-03-10', 21, 'ECO'),         
+(456004, 456789, '2023-09-22', 26, 'ARC'),         
+(567005, 567890, '2023-10-28', 27, 'POL'),         
+(123006, 678901, '2023-01-20', 16, 'INF'),         
+(234007, 789012, '2023-02-12', 29, 'BIO'),         
+(345008, 890123, '2023-03-18', 24, 'ECO'),         
+(456009, 901234, '2023-09-25', 19, 'ARC'),         
+(567010, 123789, '2023-11-15', 28, 'POL'),
+(123011, 123456, '2023-02-10', 22, 'INF'),         -- Algoritmi e Strutture Dati
+(234012, 234567, '2023-03-05', 17, 'BIO'),         -- Biologia Molecolare
+(345013, 345678, '2023-04-18', 28, 'ECO'),         -- Economia Aziendale
+(456014, 456789, '2023-10-02', 20, 'ARC'),         -- Architettura Moderna
+(567015, 567890, '2023-11-20', 25, 'POL'),         -- Politica Comparata
+(123016, 678901, '2023-02-28', 19, 'INF'),         -- Algoritmi e Strutture Dati
+(234017, 789012, '2023-03-15', 26, 'BIO'),         -- Biologia Molecolare
+(345018, 890123, '2023-04-10', 23, 'ECO'),         -- Economia Aziendale
+(456019, 901234, '2023-10-15', 18, 'ARC'),         -- Architettura Moderna
+(567020, 123789, '2023-11-25', 27, 'POL'),
+(123001, 123456, '2023-03-10', 24, 'INF'),         -- Algoritmi e Strutture Dati
+(234002, 234567, '2023-04-05', 19, 'BIO'),         -- Biologia Molecolare
+(345003, 345678, '2023-05-18', 30, 'ECO'),         -- Economia Aziendale
+(456004, 456789, '2023-11-02', 22, 'ARC'),         -- Architettura Moderna
+(567005, 567890, '2023-12-20', 28, 'POL'),         -- Politica Comparata
+(123006, 678901, '2023-03-28', 17, 'INF'),         -- Algoritmi e Strutture Dati
+(234007, 789012, '2023-04-15', 25, 'BIO'),         -- Biologia Molecolare
+(345008, 890123, '2023-05-10', 20, 'ECO'),         -- Economia Aziendale
+(456009, 901234, '2023-11-15', 26, 'ARC'),         -- Architettura Moderna
+(567010, 123789, '2023-12-25', 18, 'POL'),         -- Politica Comparata
+(123011, 123456, '2023-04-10', 27, 'INF'),         -- Algoritmi e Strutture Dati
+(234012, 234567, '2023-05-05', 23, 'BIO'),         -- Biologia Molecolare
+(345013, 345678, '2023-06-18', 29, 'ECO'),         -- Economia Aziendale
+(456014, 456789, '2023-12-02', 21, 'ARC'),         -- Architettura Moderna
+(567015, 567890, '2023-01-20', 25, 'POL'),         -- Politica Comparata
+(123016, 678901, '2023-04-28', 22, 'INF'),         -- Algoritmi e Strutture Dati
+(234017, 789012, '2023-05-15', 26, 'BIO'),         -- Biologia Molecolare
+(345018, 890123, '2023-06-10', 19, 'ECO'),         -- Economia Aziendale
+(456019, 901234, '2023-12-15', 24, 'ARC'),         -- Architettura Moderna
+(567020, 123789, '2023-01-25', 28, 'POL'),         -- Politica
+(123001, 123456, '2023-02-10', 22, 'INF'),         -- Algoritmi e Strutture Dati
+(234002, 234567, '2023-03-05', 17, 'BIO'),         -- Biologia Molecolare
+(345003, 345678, '2023-04-18', 28, 'ECO'),         -- Economia Aziendale
+(456004, 456789, '2023-10-02', 20, 'ARC'),         -- Architettura Moderna
+(567005, 567890, '2023-11-20', 25, 'POL'),         -- Politica Comparata
+(123006, 678901, '2023-02-28', 19, 'INF'),         -- Algoritmi e Strutture Dati
+(234007, 789012, '2023-03-15', 26, 'BIO'),         -- Biologia Molecolare
+(345008, 890123, '2023-04-10', 23, 'ECO'),         -- Economia Aziendale
+(456009, 901234, '2023-10-15', 18, 'ARC'),         -- Architettura Moderna
+(567010, 123789, '2023-11-25', 27, 'POL'),         -- Politica Comparata
+(123011, 123456, '2023-02-10', 24, 'INF'),         -- Algoritmi e Strutture Dati
+(234012, 234567, '2023-03-05', 19, 'BIO'),         -- Biologia Molecolare
+(345013, 345678, '2023-04-18', 30, 'ECO'),         -- Economia Aziendale
+(456014, 456789, '2023-10-02', 22, 'ARC'),         -- Architettura Moderna
+(567015, 567890, '2023-11-20', 28, 'POL'),         -- Politica Comparata
+(123016, 678901, '2023-02-28', 17, 'INF'),         -- Algoritmi e Strutture Dati
+(234017, 789012, '2023-03-15', 25, 'BIO'),         -- Biologia Molecolare
+(345018, 890123, '2023-04-10', 20, 'ECO'),         -- Economia Aziendale
+(456019, 901234, '2023-10-15', 26, 'ARC'),         -- Architettura Moderna
+(567020, 123789, '2023-11-25', 18, 'POL'),         
+(123081, 123456, '2023-04-10', 27, 'INF'),         -- Algoritmi e Strutture Dati
+(234082, 234567, '2023-05-05', 23, 'BIO'),         -- Biologia Molecolare
+(345083, 345678, '2023-06-18', 29, 'ECO'),         -- Economia Aziendale
+(456084, 456789, '2023-12-02', 21, 'ARC'),         -- Architettura Moderna
+(567085, 567890, '2023-01-20', 25, 'POL'),         -- Politica Comparata
+(123086, 678901, '2023-04-28', 22, 'INF'),         -- Algoritmi e Strutture Dati
+(234087, 789012, '2023-05-15', 26, 'BIO'),         -- Biologia Molecolare
+(345088, 890123, '2023-06-10', 19, 'ECO'),         -- Economia Aziendale
+(456089, 901234, '2023-12-15', 24, 'ARC'),         -- Architettura Moderna
+(567090, 123789, '2023-01-25', 28, 'POL'),         -- Politica Comparata
+(123091, 123456, '2023-04-10', 24, 'INF'),         -- Algoritmi e Strutture Dati
+(234092, 234567, '2023-05-05', 19, 'BIO'),         -- Biologia Molecolare
+(345093, 345678, '2023-06-18', 30, 'ECO'),         -- Economia Aziendale
+(456094, 456789, '2023-12-02', 22, 'ARC'),         -- Architettura Moderna
+(567095, 567890, '2023-01-20', 28, 'POL'),         -- Politica Comparata
+(123096, 678901, '2023-04-28', 17, 'INF'),         -- Algoritmi e Strutture Dati
+(234097, 789012, '2023-05-15', 25, 'BIO'),         -- Biologia Molecolare
+(345098, 890123, '2023-06-10', 20, 'ECO'),         -- Economia Aziendale
+(456099, 901234, '2023-12-15', 26, 'ARC'),         -- Architettura Moderna
+(567100, 123789, '2023-01-25', 18, 'POL');  
+
+-- fetch some values
+SELECT S.MatricolaStudente, S.NomeStudente, E.Voto, E.SettoreScientifico, D.MATRICOLADocente, D.NomeDocente
+FROM STUDENTE S
+JOIN ESAME E ON S.MatricolaStudente = E.MATRICOLAStudente
+JOIN CORSO C ON E.CodiceEsame = C.CodiceCorso
+JOIN DOCENTE D ON C.MatricolaDocente = D.MATRICOLADocente 
+    WHERE E.Voto >= 28;
+
+-- SELECT D.NomeDocente AS PROFESSORE, C.NomeCorso AS MATERIA, E.SettoreScientifico AS AMB_DISCPL
+-- FROM DOCENTE D
+-- JOIN CORSO C ON C.MATRICOLADocente = D.MatricolaDocente
+-- JOIN ESAME E ON E.CodiceEsame = C.CodiceCorso;
+
+-- SELECT S.NomeStudente AS Studente, S.MatricolaStudente AS ID, max(E.Voto) AS VOTOMX, min(E.Voto) AS VOTOMN, avg(E.Voto) AS VOTOMD
+-- FROM STUDENTE S
+-- JOIN ESAME E ON S.MatricolaStudente = E.MATRICOLAStudente
+-- GROUP BY S.NomeStudente, S.MatricolaStudente;
+
+-- SELECT S.MatricolaStudente AS ID, S.NomeStudente AS Studente, max(E.Voto) AS VOTOMX, min(E.Voto) AS VOTOMN, avg(E.Voto) AS VOTOMD
+-- FROM STUDENTE S
+-- JOIN ESAME E ON E.MATRICOLAStudente = S.MatricolaStudente
+-- GROUP BY S.MatricolaStudente, S.NomeStudente
+-- HAVING AVG(E.Voto)>25 AND COUNT(E.Data)>= 10
+-- ORDER BY AVG(E.Voto) ASC; 
