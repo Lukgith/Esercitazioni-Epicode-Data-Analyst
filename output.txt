@@ -1,0 +1,1 @@
+"Questo è un esempio di scrittura in file usando magic command"
