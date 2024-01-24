@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="comuniitaliani.py" />
     <Compile Include="fileaccess.py" />
     <Compile Include="listcomprehension.py" />
     <Compile Include="rubrica.py" />
@@ -28,6 +29,7 @@
   <ItemGroup>
     <Content Include="Advanced Python.pdf" />
     <Content Include="core python.pdf" />
+    <Content Include="elenco-comuni.csv" />
     <Content Include="Esempio.txt" />
     <Content Include="gitcheatsheet.pdf" />
     <Content Include="Hello World! 2nd Edition.pdf" />
