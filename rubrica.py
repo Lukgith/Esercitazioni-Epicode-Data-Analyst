@@ -35,33 +35,33 @@ def inserisci():
     return nome, telefono  # restituisce la tupla (nome, numero)
 
 # la visualizzazione dovrà prevedere la stampa della rubrica
-
-
 def visualizza():
     for i in rubrica:
         print("Nome:", i["nome"], "Telefono", i["telefono"])
 
 
 # implementazione della persistenza su file
-file_rubrica = "./rubrica.txt"
+file_rubrica = "./rubrica.txt"  # nome del file
 
 # salva le informazioni su un file di testo
 def salva(nome_file: str):
     with open(nome_file, "w") as f:
         f.writelines([e["nome"] + ';' + e["telefono"] + '\n' for e in rubrica])
 
-#legge le informazioni da un file di testo
-def leggi(nome_file:str):
+# legge le informazioni da un file di testo
+def leggi(nome_file: str):
     with open(nome_file, "r") as f:
-        lines = f.readlines() # legge le righe per intero
-    elab = [l.strip().split(';') for l in lines] # divide ogni riga in base alla presenza di un carattere ;
+        lines = f.readlines()  # legge le righe per intero
+    # divide ogni riga in base alla presenza di un carattere ;
+    elab = [l.strip().split(';') for l in lines]
     #      trasforma le liste ottenute in precedenza creando per ogni riga un dict
     return [{'nome': l[0], 'telefono': l[1]} for l in elab]
-    
+
+
 rubrica = leggi(file_rubrica)
 scelta = -1
 while scelta != 0:
-    scelta = menu()
+    scelta = menu() # l'utente sceglie una voce del menu
     if scelta == 1:
         nome, numero = inserisci()  # qui ottengo ciò che l'utente ha inserito
         # lo aggiungo alla rubrica
