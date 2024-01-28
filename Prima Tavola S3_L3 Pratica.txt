@@ -1,0 +1,116 @@
+/*DISCO(NroSerie, TitoloAlbum,Anno,Prezzo)       
+CONTIENE(NroSerieDisco,CodiceReg,NroProg)       
+ESECUZIONE(CodiceReg,TitoloCanz,Anno)       
+AUTORE(Nome,TitoloCanzone)       
+CANTANTE(NomeCantante,CodiceReg)*/
+
+
+CREATE TABLE DISCO (NroSerie INTEGER PRIMARY KEY,
+                    TitoloAlbum TEXT(50),
+                    Anno YEAR,
+                    Prezzo INTEGER);
+
+CREATE TABLE AUTORE(Nominativo TEXT(60),
+                    TitoloCanzone TEXT(100));
+
+CREATE TABLE CANTANTE(NominativoCantante TEXT(60),
+                      CodiceReg VARCHAR(4));
+
+
+CREATE TABLE ESECUZIONE(CodiceReg VARCHAR(4),
+                        TitoloCanz TEXT(100),
+                        Anno YEAR);
+
+
+CREATE TABLE CONTIENE(NroSerieDisco INTEGER,CodiceReg VARCHAR(4),NroProg INTEGER); 
+
+
+INSERT INTO CANTANTE (NominativoCantante, CodiceReg) VALUES 
+    ('David Bowie', 'A01'),
+    ('Diana Ross', 'A02'),
+    ('Elvis Presley', 'A04'),
+    ('Demi Lovato', 'A03'),
+    ('Frank Sinatra', 'A05'),
+    ('Adele', 'A06'),
+    ('Duilio Del Prete', 'A07'),
+    ('Dua Lipa', 'A08'),
+    ('Dargen D_amico', 'A09'),
+    ('Freddy Mercury', 'A10');
+
+INSERT INTO AUTORE (Nominativo, TitoloCanzone) VALUES 
+    ('David Bowie', 'Heroes'),
+    ('Diana Ross', 'Endless Love'),
+    ('Demi Lovato', 'Sorry Not Sorry'),
+    ('John Lennon', 'Imagine'),
+    ('Adele', 'Someone Like You'),
+    ('Elton John', 'Rocket Man'),
+    ('Taylor Swift', 'Shake It Off'),
+    ('Bruno Mars', 'Uptown Funk'),
+    ('Ed Sheeran', 'Shape of You'),
+    ('Whitney Houston', 'I Will Always Love You'),
+    ('Freddie Mercury', 'Bohemian Rhapsody'),
+    ('Bob Dylan', 'Like a Rolling Stone'),
+    ('Celine Dion', 'My Heart Will Go On'),
+    ('Justin Bieber', 'Baby'),
+    ('Lady Gaga', 'Bad Romance'),
+    ('Michael Jackson', 'Billie Jean'),
+    ('Prince', 'Purple Rain'),
+    ('Madonna', 'Like a Virgin'),
+    ('Bob Marley', 'No Woman, No Cry'),
+    ('Beyoncé', 'Single Ladies');
+
+
+INSERT INTO ESECUZIONE (CodiceReg, TitoloCanz, Anno) VALUES 
+    ('A01', 'Heroes', 1987),
+    ('A02', 'Endless Love', NULL),
+    ('A03', 'Sorry Not Sorry', 2010),
+    ('A04', 'Imagine', 1971),
+    ('A06', 'Someone Like You', 2011),
+    ('A05', 'Rocket Man', 1972),
+    ('A07', 'Shake It Off', 2015),
+    ('A08', 'Uptown Funk', 2014),
+    ('A09', 'Shape of You', NULL),
+    ('A10', 'I Will Always Love You', 1992),
+    ('A11', 'Bohemian Rhapsody', 1975),
+    ('A12', 'Like a Rolling Stone', 1999),
+    ('A13', 'My Heart Will Go On', 1997),
+    ('A14', 'Baby', 2010),
+    ('A15', 'Bad Romance', 2009),
+    ('A16', 'Billie Jean', 1970),
+    ('A17', 'Purple Rain', 1984),
+    ('A18', 'Like a Virgin', 1984),
+    ('A19', 'No Woman, No Cry', 1974),
+    ('A20', 'Single Ladies', 2008);
+
+
+INSERT INTO DISCO (NroSerie, TitoloAlbum, Anno, Prezzo) VALUES 
+    (1, 'Greatest Hits', 2000, 20),
+    (2, 'Best of the 80s', 1985, 15),
+    (3, 'Classic Rock Anthems', 1978, 18),
+    (4, 'Pop Sensations', 2015, 25),
+    (5, 'Jazz Fusion Explorations', 1990, 22),
+    (6, 'Hits of David Bowie', 2005, 22),
+    (7, 'Classic Love Songs', 1999, 18);
+
+INSERT INTO CONTIENE (NroSerieDisco, CodiceReg, NroProg) VALUES 
+    (1, 'A01', 1),
+    (1, 'A02', 2),
+    (2, 'A04', 3),
+    (3, 'A03', 4),
+    (4, 'A05', 5),
+    (5, 'A06', 6),
+    (6, 'A01', 7),
+    (7, 'A02', 8),
+    (8, 'A07', 9),
+    (9, 'A08', 10),
+    (4, 'A09', 11),
+    (3, 'A10', 12),
+    (1, 'A11', 13);
+
+/*SELECT A.Nominativo  AS Cantautore FROM AUTORE A
+INNER JOIN CANTANTE C ON C.NominativoCantante= A.Nominativo;*/ 
+
+
+SELECT D.TitoloAlbum AS TITOLO FROM DISCO D
+INNER JOIN CONTIENE Co ON Co.NroSerieDisco= D.NroSerie 
+INNER JOIN ESECUZIONE E ON E.CodiceReg= Co.Codicereg WHERE E.anno is NULL;
