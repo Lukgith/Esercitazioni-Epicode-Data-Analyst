@@ -1,0 +1,40 @@
+Link:
+
+https://lookerstudio.google.com/u/0/reporting/9e233014-5ca6-4405-8b64-0c7f8dfb3804/page/p_9udlkeq4ed p
+https://lookerstudio.google.com/u/0/reporting/9e233014-5ca6-4405-8b64-0c7f8dfb3804/page/Om2rD
+https://lookerstudio.google.com/u/0/reporting/9e233014-5ca6-4405-8b64-0c7f8dfb3804/page/p_8x2hx1j4ed
+https://lookerstudio.google.com/u/0/reporting/9e233014-5ca6-4405-8b64-0c7f8dfb3804/page/p_8ehrm1j4ed
+https://lookerstudio.google.com/u/0/reporting/9e233014-5ca6-4405-8b64-0c7f8dfb3804/page/p_15cg21j4ed
+
+
+Salve Giacomo,
+
+sono Luca Silvi.
+
+Questo è il file txt allegato alla dashboard on delucidazioni in merito alla sua struttura senso ed ordinamento.
+
+La dashboard l'ho creata con Google Looker Studio Demo
+
+Essa è basata sulle sessioni di allenamento leggero che ho effettuato pressochè tutte le mattine 
+dall'inizio del corso fino al 4 marzo giorno in cui è stato richiesto un lavoro sui dati provenienti da queste
+
+Oltre alla pagine di presentazione e congedo,
+
+ho diviso il corpo centrale contenente lo studio e l'elaborazione dei dati vera e propria  in 3 pagine.
+
+Esse sono così divise:
+
+   -1a)  Spazio: la prima pagina l'ho selezionata per considerare le informazioni provenienti dall'allenamento che 
+                 riportassero dati spaziali
+   -2a)  Tempo: qui troverai i dati legati al tempo
+   -3a) Velocità ed Energia: i dati legati alle precedenti unità di misura.
+
+Ho trovato molto interessante:
+
+	1) la distinzione netta tra le velocità medie di Camminate e Corse
+
+	2) gli orari preferite per iniziare e finire le sessioni di allenamento
+
+	3) la durata media dell'allenamento
+
+	4) le Kcal medie metabolizzate differentemente per Camminata o per Corsa.
